@@ -1,4 +1,4 @@
-function [datetimes,lvl,year] = TGprocess(folder_path)
+function [datetimes,lvl,year] = TGprocess_UNIX(folder_path)
 % TGprocess Processing of BIG Tide Gauges data for UNIX System
 % made by Zulfikar A. Nadzir, February 2022
 % INPUT  :
@@ -31,7 +31,8 @@ for p=1:length(filename)
     lvl{p}=A.data(:,1);
     % Year Record
     year{p}=cell2mat(extractBetween (file{p,1},"_","."));
-end
-% Read Lat, Lon and Name of Station  
+end 
 % Saving the Workspace
+fname=sprintf('data.mat');
+save(fname,'datetimes','lvl','year');
 end
