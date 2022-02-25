@@ -1,5 +1,5 @@
 function [datetimes,lvl,year] = TGprocess(folder_path)
-% TGprocess Processing of BIG Tide Gauges data
+% TGprocess Processing of BIG Tide Gauges data for UNIX System
 % made by Zulfikar A. Nadzir, February 2022
 % INPUT  :
 %   folder_path = complete path of individual stations (string)
